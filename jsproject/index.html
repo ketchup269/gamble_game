@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUR LUCK!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Slot Machine Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <h1 id="open">DOES YOUR LUCK SUCK?</h1>
-        <div>
-            <input id="balance"> DEPOSIT HERE </input>
-            <input id="lines"> HOW MANY LINES YOU THINK YOU CAN GET RIGHT? </input>
-            <input id="bet" >BET AMOUNT PER LINE</input>
-            <button id="spin">SPIN</button>
+    <h1>Slot Machine Game</h1>
+    
+    <div id="game-container">
+        <div id="inputs">
+            <label for="deposit">Deposit Amount:</label>
+            <input type="number" id="deposit" placeholder="Enter deposit amount">
+            <button id="start-game">Start Game</button>
         </div>
+
+        <div id="betting-controls" style="display: none;">
+            <label for="lines">Number of Lines (1-3):</label>
+            <input type="number" id="lines" min="1" max="3">
+            
+            <label for="bet">Bet Amount Per Line:</label>
+            <input type="number" id="bet">
+            
+            <button id="spin">Spin</button>
+        </div>
+
+        <div id="reels"></div>
+        <span id="result"></span>
+        <span id="balance-display"></span>
     </div>
 
     <script src="project.js"></script>
